@@ -1,6 +1,6 @@
 /*
 Author: Jey Han Lau
-Date: May 13
+Date: May 14
 
 Reads a BHMM model file and outputs the induced word classes of sentences of the training data.
 */
