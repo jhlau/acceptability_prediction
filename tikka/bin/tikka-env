@@ -7,7 +7,7 @@ JAVA=/usr/bin/java
 
 if [ -z $JAVA_MEM_FLAG ]
 then
-    JAVA_MEM_FLAG=-Xmx15000m
+    JAVA_MEM_FLAG=-Xmx4000m
 fi
 
 # Now prepares the Java command with the right settings                                                                                                                                                   
