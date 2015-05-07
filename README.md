@@ -48,6 +48,11 @@ An example dataset is provided under directory example_dataset/raw
 
 Installation
 ============
+###N-gram Model
+
+The N-gram model is written in python, and requires scipy to run. No additional compilation
+is necessary.
+
 ###tikka
 The source code of the original Bayesian models are provided by tikka-postagger; full
 documentation can be found on: http://code.google.com/p/tikka-postagger/
@@ -55,13 +60,14 @@ documentation can be found on: http://code.google.com/p/tikka-postagger/
 Modifications: implemented a few new models, and parallelised the original models.
 
 tikka requires Java 1.6 and ant. To build the source, set the environment variables 
-JAVA_HOME and TIKKA_DIR to the appropriate directories. Also, update the CLASSPATH variable so
-you won't need to specify the class path every time when compiling code that uses tikka.
+JAVA_HOME and TIKKA_DIR to the appropriate directories. Also, update the CLASSPATH variable
+to include cli.jar and commons-math3-3.2jar (in tikka/lib), and the to-be-compiled tikka classes
+(tikka/build/classes).
 
 Example commands:
 * export JAVA_HOME="/usr/lib/jvm/java-6-openjdk-amd64"
 * export TIKKA_DIR="/home/exampleuser/acceptability_prediction/tikka"
-* export CLASSPATH=".:/home/exampleuser/acceptabiliy_prediction/tikka/build/classes"
+* export CLASSPATH=".:/home/exampleuser/acceptability_prediction/tikka/lib/cli.jar:/home/exampleuser/acceptability_prediction/tikka/lib/commons-math3-3.2.jar:/home/exampleuser/acceptabiliy_prediction/tikka/build/classes"
 
 Once the environment variables are set, run "ant" to build tikka
 
@@ -73,7 +79,7 @@ http://www.fit.vutbr.cz/~imikolov/rnnlm/
 
 Modifications were made to map the sentence probabilities to acceptability scores.
 
-RNNLM requires c++ compiler (g++4.6 or newer) to compile the source.
+RNNLM requires c++ compiler (g++4.6 or newer) and make to compile the source.
 
 To compile RNNLM, run "make"
 
