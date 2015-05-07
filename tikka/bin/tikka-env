@@ -1,0 +1,14 @@
+#!/bin/sh
+
+TIKKA_LIB=$TIKKA_DIR/lib
+JARS=${TIKKA_LIB}/cli.jar
+CP=${TIKKA_DIR}/build/classes:${JARS}
+JAVA=/usr/bin/java
+
+if [ -z $JAVA_MEM_FLAG ]
+then
+    JAVA_MEM_FLAG=-Xmx15000m
+fi
+
+# Now prepares the Java command with the right settings                                                                                                                                                   
+JAVA_CMD="$JAVA $JAVA_MEM_FLAG -classpath $CP"

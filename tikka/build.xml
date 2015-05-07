@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project name="tikka" default="compile" basedir=".">
+
+  <description>tikka xml handler</description>
+
+  <property environment="env"/>
+  <property name="src.dir"       value="java/tikka"/>
+  <property name="ext.dir"       value="lib"/>
+
+  <property name="build.dir"     value="build"/>
+  <property name="build.classes" value="${build.dir}/classes"/>
+  <property name="build.lib"     value="${build.dir}/lib"/>
+  <property name="build.src"     value="${build.dir}/src"/>
+
+  <!-- Create the build directory structure used by compile -->
+  <target name="init">
+    <mkdir dir="${build.dir}"/>
+    <mkdir dir="${build.classes}"/>
+    <mkdir dir="${build.lib}"/>
+    <mkdir dir="${build.src}"/>
+  </target>
+
+  <target name="clean" description="Completely remove all the generated files">
+    <delete dir="${build.dir}"/>
+  </target>
+
+  <target name="compile" depends="init">
+    <javac srcdir="${src.dir}" destdir="${build.classes}"
+	   deprecation="Yes" target="1.6" source="1.6" fork="true">
+      <compilerarg value="-Xlint:unchecked"/>
+      <classpath>
+	<fileset id="extensions" dir="${ext.dir}">
+	  <include name="*.jar"/>
+	  <include name="*.zip"/>
+	</fileset>
+      </classpath>
+    </javac>
+  </target>
+
+</project>
