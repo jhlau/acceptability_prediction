@@ -9,7 +9,6 @@ Argument 1: Binary model file produced by tikka
 Argument 2: Test Sentences (one line each sentence)
 */
 
-import jutil.*;
 import tikka.bhmm.model.base.*;
 import tikka.bhmm.models.*;
 import tikka.bhmm.apps.*;
