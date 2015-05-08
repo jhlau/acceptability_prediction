@@ -8,10 +8,10 @@ Project website: http://www.dcs.kcl.ac.uk/staff/lappin/smog/
 Description
 ===========
 In acceptability prediction, the task is to predict the acceptability of 
-a given sentence. To do this, our methodology first trains unsupervised 
+a given sentence. Our methodology first trains unsupervised 
 language models on raw text corpus, and then computes 'test' sentence 
-probabilities using the trained models. To map these sentence 
-probabilities to acceptability, several functions are used to normalise 
+probabilities using the trained models. To map sentence 
+probability to acceptability, several functions are used to normalise 
 sentence length and word frequency.
 
 Implementation of the following models are provided:
@@ -24,14 +24,14 @@ Implementation of the following models are provided:
 
 General Workflow
 ================
-* Prepare training data and test data in the specified format (below)
-* Run clean_dataset.sh to replace unseen/low frequency tokens in both train and
+* Prepare train data and test data (format specified below)
+* Use clean_dataset.sh to replace unseen/low frequency tokens in both train and
 test data
-* Run run_ngram.sh to train/test N-gram models
-* Run run_bayesian_models.sh to train/test Bayesian models
-* Run run_rnnlm.sh to train/test RNNLM
-* For Bayesian Chunker, since it takes word classes as input, use gen_bchunker_train.sh
-to generate train input. Note that you'll need provide a previously trained model to
+* Use run_ngram.sh to train/test N-gram models
+* Use run_bayesian_models.sh to train/test Bayesian models
+* Use run_rnnlm.sh to train/test RNNLM
+* For Bayesian Chunker, as it takes word classes as input, use gen_bchunker_train.sh
+to generate train data. Note that you'll need to provide a previously trained model to
 do this; the two-tier BHMM is a good model to use.
 
 Format
@@ -55,13 +55,13 @@ is necessary.
 
 ###tikka
 The source code of the original Bayesian models are provided by tikka-postagger; full
-documentation can be found on: http://code.google.com/p/tikka-postagger/
+documentation can be found at: http://code.google.com/p/tikka-postagger/
 
 Modifications: implemented a few new models, and parallelised the original models.
 
 tikka requires Java 1.6 and ant. To build the source, set the environment variables 
 JAVA_HOME and TIKKA_DIR to the appropriate directories. Also, update the CLASSPATH variable
-to include cli.jar and commons-math3-3.2jar (in tikka/lib), and the to-be-compiled tikka classes
+to include cli.jar and commons-math3-3.2jar (in tikka/lib), and the (to-be) built tikka classes
 (tikka/build/classes).
 
 Example commands:
