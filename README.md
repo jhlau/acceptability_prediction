@@ -88,6 +88,6 @@ Publication
 -----------
 * Jey Han Lau, Shalom Lappin and Alexander Clark (2015). 
 Unsupervised Prediction of Acceptability Judgements. In Proceedings of
-the 52nd Annual Meeting of the Association for Computational Linguistics 
+the 53rd Annual Meeting of the Association for Computational Linguistics 
 and the 7th International Joint Conference on Natural Language 
 Processing (ACL-IJCNLP 2015), Beijing, China.
