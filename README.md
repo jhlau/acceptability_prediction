@@ -3,7 +3,7 @@ acceptability prediction.  For a full description of the software,
 please refer to the publication listed at the bottom of this document.
 Datasets are hosted on our project website.
 
-Project website: http://www.dcs.kcl.ac.uk/staff/lappin/smog/
+Project website: https://gu-clasp.github.io/projects/smog/#
 
 Description
 ===========
